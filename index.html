@@ -1,27 +1,90 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>PharmaSpeak AE Lesson</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PharmaSpeak – Reporting an Adverse Event</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <h1>Welcome to the PharmaSpeak Adverse Event Lesson</h1>
-  <p>This page will soon include your listening lesson and exercises.</p>
-<h2>Listening: Reporting an Adverse Event</h2>
-<audio controls crossorigin="anonymous">
-  <source src="assets/audio/dialogue.mp3" type="audio/mpeg">
-  <track src="assets/captions/dialogue.vtt" kind="subtitles" srclang="en" label="English" default>
-  Your browser does not support the audio element.
-</audio>
-  <h2>Comprehension</h2>
-<ol>
-  <li>What reaction did the patient experience?</li>
-  <li>When did the rash appear?</li>
-  <li>What action did the doctor take?</li>
-  <li>How long did it take for the rash to clear?</li>
-  <li>What information did the medical department ask for?</li>
-  <li>What did the rep promise to do at the end of the call?</li>
-</ol>
+  <header class="container">
+    <h1>Reporting an Adverse Event</h1>
+    <p class="subtitle">Listen, review key terms, answer questions, and practice a short role-play.</p>
+  </header>
+
+  <main class="container">
+    <!-- AUDIO -->
+    <section id="audioSection" class="card">
+      <h2>Listening</h2>
+      <audio id="player" controls>
+        <source src="assets/audio/dialogue.mp3" type="audio/mpeg" />
+        Your browser does not support the audio element.
+      </audio>
+      <div class="audio-controls">
+        <label for="speed">Speed</label>
+        <select id="speed">
+          <option value="0.75">0.75×</option>
+          <option value="1" selected>1.0×</option>
+          <option value="1.25">1.25×</option>
+          <option value="1.5">1.5×</option>
+        </select>
+        <button id="resumeBtn" class="btn btn-secondary" hidden>Resume from last position</button>
+      </div>
+
+      <details id="transcriptToggle">
+        <summary>Show transcript</summary>
+        <div id="transcript" class="mono small"></div>
+      </details>
+    </section>
+
+    <!-- COMPREHENSION -->
+    <section id="qaSection" class="card">
+      <h2>Comprehension</h2>
+      <form id="qaForm" class="qa-list"></form>
+      <div class="actions">
+        <button id="checkBtn" class="btn">Check answers</button>
+        <button id="resetBtn" class="btn btn-secondary">Reset</button>
+      </div>
+      <p id="score" class="score"></p>
+    </section>
+
+    <!-- VOCABULARY -->
+    <section id="vocabSection" class="card">
+      <h2>Vocabulary</h2>
+      <div id="vocabTable" class="table"></div>
+      <div class="actions">
+        <button id="downloadVocab" class="btn btn-secondary">Download CSV</button>
+      </div>
+    </section>
+
+    <!-- ROLE-PLAY -->
+    <section id="roleplaySection" class="card">
+      <h2>Role-Play Practice</h2>
+      <div class="tabs">
+        <button class="tab active" data-tab="rep">Medical Representative</button>
+        <button class="tab" data-tab="medical">Medical Department</button>
+      </div>
+      <div id="roleplayContent" class="roleplay"></div>
+      <div class="actions">
+        <button id="recordBtn" class="btn btn-secondary">Record practice (browser)</button>
+        <a id="downloadLink" class="btn btn-secondary" href="#" download="practice.webm" hidden>Download recording</a>
+      </div>
+      <p class="note small">Recordings are stored only in your browser until you download them.</p>
+    </section>
+
+    <!-- COMPLETION -->
+    <section id="completeSection" class="card">
+      <h2>Finish</h2>
+      <p>Mark this lesson as complete when you have listened, answered all questions, and read the vocabulary.</p>
+      <button id="completeBtn" class="btn" disabled>Mark complete</button>
+      <p id="completeState" class="small muted"></p>
+    </section>
+  </main>
+
+  <footer class="container footer">
+    <p class="small muted">© PharmaSpeak. Your progress is saved locally in your browser.</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
-
