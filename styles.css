@@ -1,0 +1,88 @@
+:root{
+  --blue:#1f4fd6; /* PharmaSpeak-ish blue */
+  --red:#e02828;  /* PharmaSpeak-ish red */
+  --ink:#222;
+  --muted:#666;
+  --bg:#f7f9fc;
+  --card:#ffffff;
+  --border:#e5e9f2;
+}
+
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;line-height:1.45}
+
+.container{max-width:900px;margin:0 auto;padding:16px}
+header.container{padding-top:24px}
+h1{margin:0 0 8px 0;font-size:28px}
+.subtitle{margin:0;color:var(--muted)}
+h2{margin:0 0 12px 0;font-size:22px}
+
+.card{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:12px;
+  padding:16px;
+  margin:16px 0;
+  box-shadow:0 1px 2px rgba(0,0,0,.04);
+}
+
+.audio-controls{display:flex;gap:8px;align-items:center;margin-top:8px}
+audio{width:100%}
+
+.btn{
+  background:var(--blue);
+  color:#fff;
+  border:none;
+  padding:10px 14px;
+  border-radius:8px;
+  cursor:pointer;
+  font-weight:600;
+}
+.btn:hover{opacity:.92}
+.btn:disabled{opacity:.55;cursor:not-allowed}
+.btn-secondary{
+  background:#eef1f8;
+  color:#111;
+  border:1px solid var(--border);
+}
+
+.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+
+.qa-list .qa-item{margin-bottom:12px}
+.qa-list label{display:block;margin-bottom:6px;font-weight:600}
+.qa-list input{
+  width:100%;
+  padding:10px;
+  border:1px solid var(--border);
+  border-radius:8px;
+}
+.feedback{
+  margin-top:6px;
+  font-size:14px;
+  color:var(--muted);
+}
+.correct{color:green}
+.partial{color:#be7a00}
+.wrong{color:var(--red)}
+
+.table{border:1px solid var(--border);border-radius:8px;overflow:hidden}
+.table .row{display:grid;grid-template-columns:180px 1fr 1fr;border-top:1px solid var(--border)}
+.table .row.header{background:#f0f3fa;font-weight:700}
+.table .cell{padding:10px;border-right:1px solid var(--border)}
+.table .cell:last-child{border-right:none}
+@media (max-width:700px){
+  .table .row{grid-template-columns:1fr}
+  .table .cell{border-right:none;border-top:1px solid var(--border)}
+  .table .row.header{display:none}
+}
+
+.tabs{display:flex;gap:8px;margin-bottom:10px}
+.tab{background:#eef1f8;border:1px solid var(--border);padding:8px 12px;border-radius:999px;cursor:pointer}
+.tab.active{background:var(--blue);color:#fff;border-color:var(--blue)}
+
+.roleplay{white-space:pre-wrap}
+
+.mono{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace}
+.small{font-size:14px}
+.muted{color:var(--muted)}
+.footer{padding-bottom:32px}
