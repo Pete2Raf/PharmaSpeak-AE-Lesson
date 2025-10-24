@@ -1,1 +1,68 @@
-{}
+{
+  "title": "Reporting an Adverse Event",
+  "transcript": [
+    "Speaker 1: Good morning. I’d like to report an adverse event from one of my doctors.",
+    "Speaker 2: Sure, please go ahead. What happened?",
+    "Speaker 1: The patient developed a mild skin rash two days after starting the new batch of Amoxiril 500 mg. The doctor stopped the medication, and the rash cleared within 48 hours.",
+    "Speaker 2: Thank you. Do you have the patient’s initials, age, and gender?",
+    "Speaker 1: Yes, it’s M.A., a 45-year-old male. The doctor didn’t report any other reactions.",
+    "Speaker 2: Perfect. Please send me the completed adverse event form today so we can log it in the system.",
+    "Speaker 1: Will do. I’ll email it to you right after this call."
+  ],
+  "questions": [
+    "What reaction did the patient experience?",
+    "When did the rash appear?",
+    "What action did the doctor take?",
+    "How long did it take for the rash to clear?",
+    "What information did the medical department ask for?",
+    "What did the rep promise to do at the end of the call?"
+  ],
+  "answerKey": [
+    "A mild skin rash.",
+    "Two days after starting the new batch.",
+    "The doctor stopped the medication.",
+    "Within 48 hours.",
+    "Patient’s initials, age, and gender.",
+    "Send the completed adverse event form by email."
+  ],
+  "vocabulary": [
+    {
+      "term": "Adverse event",
+      "meaning": "Any unwanted medical occurrence after taking a drug",
+      "example": "We must report all adverse events within 24 hours."
+    },
+    {
+      "term": "Batch",
+      "meaning": "A group of products made at the same time",
+      "example": "The issue was linked to the latest batch."
+    },
+    {
+      "term": "Cleared",
+      "meaning": "Resolved or disappeared",
+      "example": "The symptoms cleared after the drug was stopped."
+    },
+    {
+      "term": "Report",
+      "meaning": "To give official information about an event",
+      "example": "Please report this incident to the medical department."
+    },
+    {
+      "term": "Reaction",
+      "meaning": "An unwanted effect caused by a medicine",
+      "example": "The patient had a mild allergic reaction."
+    },
+    {
+      "term": "Log in the system",
+      "meaning": "Record officially in a database",
+      "example": "The team will log the case in the system."
+    }
+  ],
+  "roleplay": {
+    "rep": "You received a report of nausea and dizziness after Painol 200 mg. Call the medical department, provide key details (initials, age, gender, reaction, timing, action, outcome), and ask if other information is needed.",
+    "medical": "A rep calls to report an adverse event. Ask for product, dose, reaction, timing, patient info, and action taken. Remind the rep to send the adverse event form."
+  },
+  "assets": {
+    "audio": "assets/audio/dialogue.mp3",
+    "captions": "assets/captions/dialogue.vtt"
+  }
+}
